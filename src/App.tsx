@@ -1,3 +1,5 @@
+import logo from './assets/logo.png';
+import imagenPrincipal from './assets/imagen principal.webp';
 import React, { useState, useEffect, useRef } from 'react';
 import { 
   Menu, 
@@ -248,14 +250,12 @@ const Navbar = ({ segment, onSelectSegment }: { segment: 'particular' | 'empresa
   return (
     <nav className={`fixed w-full z-50 transition-all duration-500 border-b ${scrolled ? 'bg-hope-bg/90 backdrop-blur-md border-hope-border py-4' : 'bg-transparent border-transparent py-8'}`}>
       <div className="max-w-[1800px] mx-auto px-6 lg:px-12 flex justify-between items-center">
-        <a href="#" className="flex items-center gap-3">
-          <div className="w-10 h-10 bg-hope-orange rounded-sm flex items-center justify-center">
-            <Building2 className="text-hope-white" size={20} />
-          </div>
-          <div className="flex flex-col">
-            <span className="text-lg font-black tracking-tighter leading-none">HOPE</span>
-            <span className="text-[9px] uppercase tracking-[0.2em] text-hope-arena font-bold">Construcción Modular</span>
-          </div>
+        <a href="#" className="flex items-center">
+          <img 
+            src={logo} 
+            alt="Hope Construcción Modular" 
+            className="h-10 md:h-12 w-auto object-contain" 
+          />
         </a>
 
         <div className="hidden lg:flex items-center gap-8">
@@ -310,7 +310,7 @@ const Hero = ({ onSelectSegment }: { onSelectSegment: (s: 'particular' | 'empres
     <section className="relative min-h-screen py-20 flex items-center justify-center overflow-hidden">
       <div className="absolute inset-0 z-0">
         <img 
-          src="https://images.unsplash.com/photo-1523217582562-09d0def993a6?auto=format&fit=crop&q=80&w=1920" 
+          src={imagenPrincipal}
           className="w-full h-full object-cover" 
           alt="Hope Hero" 
           referrerPolicy="no-referrer"
@@ -327,7 +327,7 @@ const Hero = ({ onSelectSegment }: { onSelectSegment: (s: 'particular' | 'empres
           <h1 className="text-4xl sm:text-6xl md:text-8xl font-display-bold mb-8 md:mb-12 leading-[1.1] md:leading-[0.9] tracking-tight text-hope-text">
             Arquitectura modular <br className="hidden md:block" /> para vivir y trabajar
           </h1>
-          <p className="text-base md:text-xl font-light max-w-3xl mx-auto mb-10 md:mb-16 text-hope-muted leading-relaxed">
+          <p className="text-base md:text-xl font-light max-w-3xl mx-auto mb-10 md:mb-16 text-white leading-relaxed">
             Soluciones listas para usar. Fabricación en planta, plazos claros, entrega en todo el país.
           </p>
 
@@ -995,12 +995,9 @@ export default function App() {
       </section>
 
       <footer className="py-12 md:py-16 border-t border-hope-border text-center">
-        <div className="flex items-center justify-center gap-3 mb-6">
-          <div className="w-6 h-6 bg-hope-orange rounded-sm flex items-center justify-center">
-            <Building2 className="text-hope-white" size={12} />
-          </div>
-          <span className="text-[10px] font-black tracking-tighter uppercase">HOPE Construcción Modular</span>
-        </div>
+        <div className="flex items-center justify-center mb-6">
+          <img src={logo} alt="Hope Logo" className="h-8 w-auto opacity-80 hover:opacity-100 transition-opacity" />
+        </div>  
         <p className="text-[8px] md:text-[9px] uppercase tracking-[0.4em] text-hope-arena font-bold px-6">
           © 2026 Hope Construcción Modular. Esperanza, Santa Fe.
         </p>

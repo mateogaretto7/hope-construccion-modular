@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-hope-bg: #F5F5F2;
+  --color-hope-alt-bg: #F4F3EF;
+  --color-hope-text: #121212;
+  --color-hope-arena: #C7A46A;
+  --color-hope-orange: #E26A12;
+  --color-hope-orange-orig: #F47A20;
+  --color-hope-white: #FFFFFF;
+  --color-hope-border: #E7E3DA;
+  --color-hope-muted: #5B5B5B;
+  
+  --font-sans: "Montserrat", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Montserrat", ui-sans-serif, system-ui, sans-serif;
+}
+
+@layer base {
+  body {
+    @apply bg-hope-bg text-hope-text font-sans antialiased;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display tracking-tight;
+  }
+}
+
+.font-display-bold {
+  @apply font-display font-extrabold uppercase tracking-tighter;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F5F5F2;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #E7E3DA;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #C7A46A;
+}
